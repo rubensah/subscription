@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+    mysqldb:
+        image: mysql:5.7       
+        container_name: mysqldb        
+        environment:
+            MYSQL_DATABASE: subscriptiondb
+            MYSQL_ROOT_PASSWORD: root
+    publicsubs:
+        image: publicsubs
+        restart: always        
+        container_name: publicsubs
+        ports:
+            - 8000:8000
+        environment:        
+            - PRIVATESUBS_URL=http://privatesubs:7500                
+    privatesubs:
+        image: privatesubs
+        restart: always        
+        container_name: privatesubs
+        ports:
+            - 7500:7500
+        environment:            
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/subscriptiondb
+            - EMAILSUBS_URL=http://emailsubs:7000
+        depends_on:
+            - mysqldb       
+    emailsubs:
+        image: emailsubs
+        restart: always        
+        container_name: emailsubs
+        ports:
+            - 7000:7000
+        environment:        
+            - SPRING_MAIL_HOST=mailhog
+            - PRIVATESUBS_URL=http://privatesubs:7500                
+    mailhog:
+        image: mailhog/mailhog
+        restart: always        
+        container_name: mailhog
+        ports:
+            - 1025:1025
+            - 8025:8025        
+            
+            
+        
