@@ -4,7 +4,7 @@ Subscription
 
 How to build Subscription
 ----------------------------
-###Build projects
+### Build projects
 
 For **publicsubs**, **privatesubs** and **emailsubs** access to each project folder and execute the next command to build the project:
 
@@ -27,7 +27,7 @@ docker run -d -p 3306:3306 --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABA
 docker run -d -p 8025:8025 -p 1025:1025 mailhog/mailhog
 ```
 
-###Build Docker images
+### Build Docker images
 
 For **publicsubs**, **privatesubs** and **emailsubs** access to each project folder and execute the command belonging to the project to build the Docker images
 
@@ -69,7 +69,7 @@ It also can be used from the POSTMAN collection _Subscription.postman_collection
 http://localhost:8025
 ```
 
-##More about Subscription
+## More about Subscription
 
 Main technologies, frameworks and libraries used in Subscription: 
 
@@ -86,23 +86,23 @@ Main technologies, frameworks and libraries used in Subscription:
 - Docker
 - Docker Compose
 
-###Gradle
+### Gradle
 Open source tool that enables build automation. It is a fast tool, automates dependency management and works integrated with Spring Boot.
 ### Spring Boot
 Framework for Java application development. We are relieved of dependency management and the need for an application server. In addition, it is perfectly indicated for the construction of microservices.
 ### Lombok
 Java library that works with annotations. Helps with programming and simplifies code reading.
-###REST API
+### REST API
 Interface for connecting systems based on the HTTP protocol. It has been included because it allows communication between microservices in a fast way.
-###JUnit
+### JUnit
 Library for unit testing Java applications. It is very complete and widely used.
-###Swagger
+### Swagger
 Tool to design, build, document, and use RESTful services. Used in this project because it is a very complete, versatile and easy-to-use tool, for documentation or for testing in this case.
-###Basic access authentication
+### Basic access authentication
 HTTP security protocol that requires a user and password in requests. Quick to integrate and practical for non-critical security scenarios.
-###JPA
+### JPA
 Java Persistence API. It allows a fast integration with a database (MySQL in our case) from a Java application through annotations and abstractions.
-###MySQL
+### MySQL
 Considered the most popular open source database in the world.
-###Docker Compose
+### Docker Compose
 Tool to help to define and share multi-container applications. Using a YAML configuration file we can start or stop a set of containers with a single command.
