@@ -89,11 +89,11 @@ Main technologies, frameworks and libraries used in Subscription:
 ### Gradle
 Open source tool that enables build automation. It is a fast tool, automates dependency management and works integrated with Spring Boot.
 ### Spring Boot
-Framework for Java application development. We are relieved of dependency management and the need for an application server. In addition, it is perfectly indicated for the construction of microservices.
+Framework for Java application development. It integrates with other technologies (maven or gradle for example) and allows us to create very light applications to be used in microservices architecture. It includes an application server that is very useful in the development phase.
 ### Lombok
 Java library that works with annotations. Helps with programming and simplifies code reading.
 ### REST API
-Interface for connecting systems based on the HTTP protocol. It has been included because it allows communication between microservices in a fast way.
+Interface for connecting systems based on the HTTP protocol. It has been included because it allows communication in distributed services using JSON.
 ### JUnit
 Library for unit testing Java applications. It is very complete and widely used.
 ### Swagger
@@ -101,7 +101,7 @@ Tool to design, build, document, and use RESTful services. Used in this project 
 ### Basic access authentication
 HTTP security protocol that requires a user and password in requests. Quick to integrate and practical for non-critical security scenarios.
 ### JPA
-Java Persistence API. It allows a fast integration with a database (MySQL in our case) from a Java application through annotations and abstractions.
+Java Persistence API. It allows a fast integration with a database (MySQL in our case) from a Java application through annotations and abstractions in persistence layer logic.
 ### MySQL
 Considered the most popular open source database in the world.
 ### Docker Compose
