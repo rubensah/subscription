@@ -132,9 +132,9 @@ Kubernetes config
 Basic configuration files for Subscription on Kubernetes cluster
 
 #### Publicsubs service
-[configmap.yml](./k8s/publicsub/configmap.yml)
-[deployment.yml](./k8s/publicsub/deployment.yml)
-[service.yml](./k8s/publicsub/service.yml)
+[configmap.yml](./k8s/publicsubs/configmap.yml)
+[deployment.yml](./k8s/publicsubs/deployment.yml)
+[service.yml](./k8s/publicsubs/service.yml)
 
 #### Privatesubs service
 [configmap.yml](./k8s/privatesubs/configmap.yml)
