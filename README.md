@@ -39,7 +39,7 @@ docker build --tag=emailsubs:latest .
 
 How to run Subscription
 ----------------------------
-From the root folder, where the _docker-compose.yml_ file is located:
+From the root folder, where the [docker-compose.yml](./docker-compose.yml) file is located:
 
 - Run Docker Compose Subscription command:
 
@@ -61,7 +61,7 @@ Microservices **publicsubs**, **privatesubs** and **emailsubs** are documented w
 http://localhost:8000/swagger-ui.html
 ```
 
-It also can be used from the POSTMAN collection _Subscription.postman_collection.json_ included. All services are accessible here, private ones have their credentials configured.
+It also can be used from the POSTMAN collection [Subscription.postman_collection.json](./Subscription.postman_collection.json) included. All services are accessible here, private ones have their credentials configured.
 
 [Mailhog](https://github.com/mailhog/MailHog) is an email testing tool with a UI where you can check the simulated emails:
 
