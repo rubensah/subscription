@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: emailsubs
+  namespace: subscription
+  labels:
+    app: emailsubs
+spec:
+  selector:
+    matchLabels:
+      app: emailsubs
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: emailsubs
+    spec:
+      containers:
+        - name: emailsubs
+          image: emailsubs:latest
+          ports:
+            - containerPort: 7000

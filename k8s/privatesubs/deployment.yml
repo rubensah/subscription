@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: privatesubs
+  namespace: subscription
+  labels:
+    app: privatesubs
+spec:
+  selector:
+    matchLabels:
+      app: privatesubs
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: privatesubs
+    spec:
+      containers:
+        - name: privatesubs
+          image: privatesubs:latest
+          ports:
+            - containerPort: 7500

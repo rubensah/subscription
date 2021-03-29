@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: emailsubs
+  namespace: subscription
+  labels:
+    app: emailsubs
+data:
+  application.properties: |
+    server.port=7000
+    privatesubs.url=http://localhost:7500
+    privatesubs.user=privatesubsuser
+    privatesubs.pass=basicauth
+    publicsubs.url=http://publicubs:8000
+    emailsubs.url=http://emailsubs:7000
+    emailsubs.user=emailsubsuser
+    emailsubs.pass=basicauth
+    retry.mail.attemps=3
+    spring.mail.host=mailhog
+    spring.mail.port=1025

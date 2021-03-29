@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: publicsubs
+  namespace: subscription
+  labels:
+    app: publicsubs
+data:
+  application.properties: |
+    server.port=8000
+    privatesubs.url=http://privatesubs:7500
+    privatesubs.user=privatesubsuser
+    privatesubs.pass=basicauth

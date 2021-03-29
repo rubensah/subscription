@@ -106,3 +106,42 @@ Java Persistence API. It allows a fast integration with a database (MySQL in our
 Considered the most popular open source database in the world.
 ### Docker Compose
 Tool to help to define and share multi-container applications. Using a YAML configuration file we can start or stop a set of containers with a single command.
+
+CI/CD pipeline proposal
+----------------------------
+
+#### First of all, define the repository strategy
+This is a small project with only three microservices. We assume that it will not increase the number, or if it does it will not be in large quantity. Knowing that the  scalability of the project is limited, a **single repository** will be used.
+
+#### Define CI/CD steps
+For the same reasons as the previous point, for this low complexity project there will be a single CI/CD pipeline with the following steps:
+1. Code checkout
+2. Build
+3. Run tests
+4. Create images
+5. Images to registry
+6. Clean   
+7. docker-compose down
+8. docker-compose up
+9. Notify
+
+This pipe will be fired every time the repository is updated.
+
+Kubernetes config
+----------------------------
+Basic configuration files for Subscription on Kubernetes cluster
+
+#### Publicsubs service
+[configmap.yml](./k8s/publicsub/configmap.yml)
+[deployment.yml](./k8s/publicsub/deployment.yml)
+[service.yml](./k8s/publicsub/service.yml)
+
+#### Privatesubs service
+[configmap.yml](./k8s/privatesubs/configmap.yml)
+[deployment.yml](./k8s/privatesubs/deployment.yml)
+[service.yml](./k8s/privatesubs/service.yml)
+
+#### Emailsubs service
+[configmap.yml](./k8s/emailsubs/configmap.yml)
+[deployment.yml](./k8s/emailsubs/deployment.yml)
+[service.yml](./k8s/emailsubs/service.yml)
